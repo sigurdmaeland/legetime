@@ -1,1 +1,51 @@
-hei pp deg jjfjaskjafijewdi
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Legetime</title>
+</head>
+<body>
+    <h1>Kristiansand legekontor</h1>
+
+    <ul class="meny">
+        <li><a href="index.html">Hjem</a></li>
+        <li><a href="oss.html">Om oss</a></li>
+        <li><a href="timebestilling.html">Timebestilling</a></li>
+        <li><a href="tjenester.html">Tjenester</a></li>
+        <li><a href="pasientinformasjon.html">Pasientinformasjon</a></li>
+    </ul>
+
+    <div class="container">
+    <p>Kristiansand Legekontor er et anerkjent helsesenter som tilbyr et bredt spekter av medisinske tjenester og omsorg for lokalbefolkningen i Kristiansand og omkringliggende områder. Vår dedikerte og erfarte stab av leger, sykepleiere og helsepersonell er her for å møte dine helsebehov på en trygg og profesjonell måte.
+
+    Våre tjenester inkluderer generell medisinsk konsultasjon, forebyggende helsekontroller, vaksinasjoner, behandling av akutte og kroniske sykdommer, samt veiledning om livsstilsendringer for å forbedre din generelle helse. Vi legger stor vekt på å etablere en personlig forbindelse med våre pasienter, og vi er dedikerte til å tilby omsorg som er skreddersydd til dine individuelle behov.
+
+    På Kristiansand Legekontor forstår vi viktigheten av tilgjengelighet og bekvemmelighet for våre pasienter. Vi tilbyr derfor fleksible avtale- og timeplanleggingsmuligheter. Vårt mål er å gi deg den beste omsorgen, uansett om du trenger øyeblikkelig hjelp eller langsiktig helsestøtte.
+
+    Vi er stolte av å være en del av det lokale helsemiljøet og ser frem til å ta vare på deg og din families helsebehov. Velkommen til Kristiansand Legekontor, hvor din helse og velvære er vår prioritet.</p>
+</div>
+
+<div class="container1">
+    <h3>Logg inn </h3>
+    <p>brukernavn:<input id="brukernavn" type="text"></p> 
+    <p>Passord:<input id="passord" type="text"></p>
+
+    <button id="knapp">Bekreft</button>
+
+    <div id="utskrift"></div>
+    <script>
+        var brukernavnEl = document.getElementById("brukernavn");
+        var passordEl = document.getElementById("passord");
+        var knappEl = document.getElementById("knapp");
+        var utskriftEl = document.getElementById("utskrift");
+
+        knappEl.addEventListener("click", function(){
+            utskrift = "Du er logget inn med brukernavnet " + brukernavnEl.value + " og passordet " + passordEl.value +"!";
+            utskriftEl.innerHTML = utskrift;
+        });
+    </script>
+</div>
+</body>
+</html>
