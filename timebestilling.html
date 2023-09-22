@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Legetime</title>
+</head>
+<body>
+    <h1>Kristiansand legekontor</h1>
+
+    <ul class="meny">
+        <li><a href="index.html">Hjem</a></li>
+        <li><a href="oss.html">Om oss</a></li>
+        <li><a href="timebestilling.html">Timebestilling</a></li>
+        <li><a href="tjenester.html">Tjenester</a></li>
+        <li><a href="pasientinformasjon.html">Pasientinformasjon</a></li>
+    </ul>
+
+    <div class="container">
+        <h2>Bestill legetime</h2>
+        
+        <p>Email:<input type="text" id="epost"></p>
+        <p>Fornavn:<input type="text" id="fornavn"></p>
+        <p>Etternavn:<input type="text" id="etternavn"></p>
+        <p>Alder:<input type="number" id="alder"></p>
+        <p>Personnummer:<input type="number" id="personnummer"></p>
+        <p>Kort beskrivelse av helsetilstand:<input type="text" id="helsetilstand"></p>
+
+        <button id="knapp">Send inn</button>
+
+        <div id="utskrift"></div>
+        <div id="feilmelding" style="color: red;"></div>
+</div>
+
+<script>
+    var epostEl = document.getElementById("epost");
+    var fornavnEl = document.getElementById("fornavn");
+    var etternavnEl = document.getElementById("etternavn");
+    var alderEl = document.getElementById("alder");
+    var personnummerEl = document.getElementById("personnummer");
+    var helsetilstandEl = document.getElementById("helsetilstand");
+    var knappEl = document.getElementById("knapp");
+    var utskriftEl = document.getElementById("utskrift");
+    var feilmeldingEl = document.getElementById("feilmelding");
+    
+
+    knappEl.addEventListener("click", function(){
+        
+     if (epostEl.value && fornavnEl.value && etternavnEl.value && alderEl.value && personnummerEl.value && helsetilstandEl.value ){   
+            var navn = fornavnEl.value + " " + etternavnEl.value;
+
+        utskrift = "Din legetime er bestilt " + navn + " , "+ alderEl.value + " år med personnummer: "+ personnummerEl.value + "<br> Det vil snart bli sendt en epost til " + epostEl.value + " om informasjon om dato og sted til legetimen.<br>"
+                    + " Opplysninger om din helsetilstand: " + helsetilstandEl.value;    
+        
+        utskriftEl.innerHTML = utskrift;
+        feilmeldingEl.innerHTML ="";
+    }   else {
+        feilmeldingEl.innerHTML = "Du må fylle ut alle punkter over";
+        utskriftEl.innerHTML = "";
+    }
+    });
+</script>
+</body>
+</html>

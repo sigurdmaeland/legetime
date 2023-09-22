@@ -3,11 +3,17 @@ body {
     
 }
 
+.tekst1 {
+    border: 2px solid black;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 7px;
+}
 .container {
     border: 3px solid black;
     margin-left: 175px;
     margin-right: 150px;
-    margin-top: -31%;
+    margin-top: -30%;
 }
 
 ul.meny {
@@ -17,6 +23,7 @@ ul.meny {
     width: 150px;
     border: 1px solid black;
     border-radius: 10%;
+    margin-top: 5%;
   
 }
 
@@ -45,3 +52,25 @@ ul.meny li a:hover {
 }
 
 /* Tilpassede farger for hver lenke */
+
+#bilde1 {
+    border: 2px solid black;
+    margin-top: 5px;
+}
+#bilde2 {
+    border: 2px solid black;
+    
+}
+
+#helsetilstand {
+    width: 600px;
+}
+
+#utskrift {
+    margin-top: 10px;
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-bottom: 40px;
+    
+}
+
